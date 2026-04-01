@@ -1,0 +1,47 @@
+table {
+  /* 把相鄰格子的邊框合併成一條線。 */
+  border-collapse: collapse;
+  /*固定欄寬分配，不讓內容把欄位撐亂*/
+  table-layout: fixed;
+  /* 上下留 20px，左右 auto 讓表格水平置中 */
+  margin: 50px auto;
+  /* 表格寬度占外層 70% */
+  width: 70%;
+}
+tr {
+  height: 50px;
+}
+td,
+th {
+  border: 1px solid black;
+  text-align: center;
+}
+
+.week-time {
+  position: relative;
+}
+
+.week-time::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to top right,
+    transparent 49.5%,
+    black 50%,
+    transparent 50.5%
+  );
+  pointer-events: none;
+}
+
+.week {
+  position: absolute;
+  top: 5px;
+  right: 25px;
+}
+
+.time {
+  position: absolute;
+  bottom: 5px;
+  left: 25px;
+}
