@@ -1,16 +1,48 @@
 table {
   /* 把相鄰格子的邊框合併成一條線。 */
   border-collapse: collapse;
-  /*固定欄寬分配，不讓內容把欄位撐亂*/
-  table-layout: fixed;
-  /* 上下留 20px，左右 auto 讓表格水平置中 */
-  margin: 50px auto;
-  /* 表格寬度占外層 70% */
-  width: 70%;
+  /* 左右 auto 讓表格水平置中 */
+  margin: auto;
+
+  border-collapse: collapse;
+  border: 1.5px solid black;
+  outline: 3px solid black;
+  outline-offset: 1px;
+
+  transform: scale(0.65);
+  transform-origin: top center;
+}
+
+.teacher-list {
+  vertical-align: center;
+}
+
+.teacher-group {
+  margin-block: 50px;
+}
+
+.teacher-col {
+  width: 11%;
+}
+.timeslot-col {
+  width: 4%;
+}
+.period-col {
+  width: 5%;
+}
+.time-col {
+  width: 6%;
+}
+.day-col {
+  width: 5%;
+}
+.day-group-col {
+  width: calc(69% / 5);
 }
 tr {
   height: 50px;
 }
+
 td,
 th {
   border: 1px solid black;
@@ -37,11 +69,11 @@ th {
 .week {
   position: absolute;
   top: 5px;
-  right: 25px;
+  right: 5px;
 }
 
 .time {
   position: absolute;
   bottom: 5px;
-  left: 25px;
+  left: 5px;
 }

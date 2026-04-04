@@ -8,9 +8,14 @@
   </head>
   <body>
     <table>
-      <caption>
-        課表
-      </caption>
+      <colgroup>
+        <col class="teacher-col" />
+        <col class="timeslot-col" />
+        <col class="period-col" />
+        <col class="time-col" />
+        <col class="day-col" />
+        <col class="day-group-col" span="5" />
+      </colgroup>
       <thead>
         <tr class="row1">
           <th>授課教師</th>
@@ -30,15 +35,62 @@
       </thead>
 
       <tr class="row2">
-        <td rowspan="15">
+        <!-- <td rowspan="15">
           【國語】<br />【數學】<br />【社會】<br />【綜合】<br />李昀軒<br /><br />【英語】<br />陳巧慧<br /><br />【自然】<br />蔣良修<br /><br />
           【美勞】<br />蔡秀婷<br /><br />【音樂】<br />蘇敬堯<br /><br /><br />【體育】<br />林俊良<br /><br />
           【健康】<br />柯雯婷<br /><br />【電腦】<br />曾瑞斌<br /><br />【母語】<br />黃振彬
+        </td> -->
+        <td rowspan="15" class="teacher-list">
+          <div class="teacher-group">
+            <div>【國語】</div>
+            <div>【數學】</div>
+            <div>【社會】</div>
+            <div>【綜合】</div>
+            <div>李昀軒</div>
+          </div>
+
+          <div class="teacher-group">
+            <div>【英語】</div>
+            <div>陳巧慧</div>
+          </div>
+
+          <div class="teacher-group">
+            <div>【自然】</div>
+            <div>蔣良修</div>
+          </div>
+
+          <div class="teacher-group">
+            <div>【美勞】</div>
+            <div>蔡秀婷</div>
+          </div>
+
+          <div class="teacher-group">
+            <div>【音樂】</div>
+            <div>蘇敬堯</div>
+          </div>
+
+          <div class="teacher-group">
+            <div>【體育】</div>
+            <div>林俊良</div>
+          </div>
+
+          <div class="teacher-group">
+            <div>【健康】</div>
+            <div>柯雯婷</div>
+          </div>
+
+          <div class="teacher-group">
+            <div>【電腦】</div>
+            <div>曾瑞斌</div>
+          </div>
+
+          <div class="teacher-group">
+            <div>【母語】</div>
+            <div>黃振彬</div>
+          </div>
         </td>
-        <td rowspan="8">
-          上 <br /><br /><br /><br /><br />
-          午
-        </td>
+
+        <td rowspan="8">上 <br /><br /><br /><br /><br /><br />午</td>
         <td rowspan="2"></td>
         <td rowspan="2">
           07:50 <br />
@@ -140,7 +192,7 @@
         <td>美勞</td>
       </tr>
       <tr class="row10">
-        <td rowspan="8">下午</td>
+        <td rowspan="8">下<br /><br /><br /><br /><br /><br />午</td>
         <td rowspan="2"></td>
         <td>
           12:05 <br />
