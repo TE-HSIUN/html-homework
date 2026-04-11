@@ -8,15 +8,143 @@
     <title>google表單</title>
   </head>
   <body>
-    <div>
-      <h1>F2E02 表單練習</h1>
+    <div class="form-container">
+      <div class="top-decoration"></div>
+      <h1 style="font-size: 32px; font-weight: 400">F2E02 表單練習</h1>
+      <div style="font-size: 15px; margin: 12px 0 0">
+        僅供新尖兵 F2E02 表單切版練習作業
+      </div>
+      <hr />
+      <div style="font-size: 14px; font-weight: 700; color: rgb(94, 94, 94)">
+        d1s1a5w3r5g3@gmail.com
+        <a href="" style="color: rgb(38, 86, 201)">
+          <u>切換帳戶</u>
+        </a>
+      </div>
+      <div style="font-size: 14px; color: rgb(94, 94, 94); margin-top: 8px">
+        未共用的項目
+      </div>
+      <hr />
+      <div style="font-size: 14px; color: rgb(202, 70, 56)">*表示必填問題</div>
     </div>
 
     <div>
-      <h2>姓名</h2>
-      <form action="">
-        <input type="text" name="name" placeholder="您的回答" />
+      <form>
+        <div class="form-blocks">
+          <div class="form-questions">
+            姓名
+            <span style="color: rgb(202, 70, 56)">*</span>
+          </div>
+          <input
+            class="input-box"
+            type="text"
+            name="name"
+            placeholder="您的回答"
+          />
+        </div>
+
+        <div class="form-blocks">
+          <div class="form-questions">
+            信箱
+            <span style="color: rgb(202, 70, 56)">*</span>
+          </div>
+          <input
+            class="input-box"
+            type="text"
+            name="email"
+            placeholder="您的回答"
+          />
+        </div>
+
+        <div class="form-blocks">
+          <div class="form-questions">生日</div>
+          <div style="font-size: 12px; color: rgb(117, 117, 117)">日期</div>
+          <input class="date-box" type="date" name="birthday" />
+        </div>
+
+        <div class="form-blocks">
+          <div class="form-questions">想跟老師說悄悄話</div>
+          <input class="input-box" type="text" name="" placeholder="您的回答" />
+        </div>
+
+        <div class="form-blocks">
+          <div class="form-questions">喜歡的顏色</div>
+          <input
+            class="select-style"
+            type="radio"
+            name=""
+            id="yollow"
+            checked
+          />
+          <label for="yollow">黃</label><br />
+          <input class="select-style" type="radio" name="" id="green" />
+          <label for="green">綠</label><br />
+          <input class="select-style" type="radio" name="" id="red" />
+          <label for="red">紅</label><br />
+        </div>
+
+        <div class="form-blocks">
+          <div class="favorite-food form-questions">喜歡吃的飲食類型</div>
+          <input class="select-style" type="checkbox" name="" id="chinese" />
+          <label for="chinese">中式</label><br />
+          <input class="select-style" type="checkbox" name="" id="italian" />
+          <label for="italian">義式</label><br />
+          <input class="select-style" type="checkbox" name="" id="japanese" />
+          <label for="japanese">日式</label><br />
+          <input class="select-style" type="checkbox" name="" id="korean" />
+          <label for="korean">韓式</label> <br />
+          <input class="select-style" type="checkbox" name="" id="American" />
+          <label for="American">美式</label><br />
+          <input class="select-style" type="checkbox" name="" id="thai" />
+          <label for="thai">泰式</label><br />
+        </div>
+
+        <div class="form-blocks">
+          <div class="form-questions">
+            最想去的國家 (使用 optgroup 將選項分為不同洲)
+          </div>
+          <select class="select-box" name="country" id="country">
+            <option value="" selected disabled>選擇</option>
+            <optgroup label="亞洲">
+              <option value="japan">日本</option>
+              <option value="korea">韓國</option>
+              <option value="thailand">泰國</option>
+            </optgroup>
+            <optgroup label="歐洲">
+              <option value="germany">德國</option>
+              <option value="uk">英國</option>
+            </optgroup>
+            <optgroup label="美洲">
+              <option value="canada">加拿大</option>
+              <option value="usa">美國</option>
+            </optgroup>
+          </select>
+        </div>
+
+        <div class="form-function-btns">
+          <div class="submit-btn">
+            <button class="submit-btn" type="submit">提交</button>
+          </div>
+
+          <div class="clear-form">
+            <a href="#">清除表單</a>
+          </div>
+        </div>
+
+        <div class="warning">
+          <p>請勿利用 Google 表單送出密碼</p>
+        </div>
       </form>
+
+      <div class="footer-content">
+        <p>
+          這份表單是在 五倍紅寶石程式資訊教育股份有限公司 中建立。 -
+          聯絡表單擁有者
+        </p>
+        <p>這份表單很可疑嗎？ 報告</p>
+      </div>
+
+      <div class="google-form">Google 表單</div>
     </div>
   </body>
 </html>
