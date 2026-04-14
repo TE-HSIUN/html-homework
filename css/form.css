@@ -1,31 +1,48 @@
 body {
-  background-color: rgb(239, 235, 247);
+  background-color: #efebf7;
 }
 
-.form-container {
+h1 {
+  font-size: 32px;
+  font-weight: 400;
+}
+
+.header-data {
+  font-size: 14px;
+  color: #5e5e5e;
+  margin: 5px 0;
+}
+
+.highlights {
+  color: #ca4638;
+}
+
+.form-head {
+  position: relative;
   margin: 12px auto;
   background-color: #fff;
   border: 1px solid #dadada;
   border-radius: 8px;
   padding: 24px;
   width: 640px;
-  position: relative; /*! 為了讓 .top-decoration 的 position: absolute; 以 .form-container 為參考點 */
+  /*! 為了讓 .top-decoration 的 position: absolute; 
+  以 .form-container 為參考點 */
 }
 
 .top-decoration {
+  position: absolute;
   top: -0.9px;
   left: -0.9px;
   height: 10px;
   width: 640px;
-  background-color: rgb(97, 60, 177);
+  background-color: #613cb1;
   border-top-left-radius: 8px;
   border-top-right-radius: 8px;
-  position: absolute;
 }
 
 hr {
-  border-top: 1px solid #dadce0;
-  margin: 5px -24px;
+  border: 0.5px solid #dadce0;
+  margin: 10px -24px;
 }
 
 .form-blocks {
@@ -39,6 +56,12 @@ hr {
 
 .form-questions {
   margin-bottom: 16px;
+}
+
+/* 當 input 元素被聚焦時，套用以下樣式 */
+input:focus {
+  outline: none; /*! 取消預設的藍色邊框 */
+  border-bottom: #613cb1 solid 1.5px;
 }
 
 .input-box {
@@ -55,7 +78,7 @@ hr {
   width: 150px;
 }
 
-.select-style {
+.option-btn {
   margin-bottom: 16px;
 }
 
@@ -69,39 +92,37 @@ hr {
 }
 
 .form-function-btns {
+  display: flex;
+  justify-content: space-between;
   margin: 12px auto 0;
   border-radius: 4px;
   font-size: 14px;
   width: 640px;
   height: 48px;
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
 }
 
 .submit-btn {
   border-radius: 4px;
   font-size: 14px;
-  background-color: rgb(97, 60, 177);
+  background-color: #613cb1;
   color: #fff;
   width: 76.5px;
   height: 36px;
 }
 
-.clear-form {
+.clear-form-btn {
   margin-top: 12px;
   border-radius: 4px;
   font-size: 14px;
   padding: 0 8px;
-  color: rgb(97, 60, 177);
-  text-align: center;
+  color: #613cb1;
 }
 
 .warning {
   margin: 12px auto 0;
   width: 640px;
   font-size: 12px;
-  color: rgb(82, 80, 84);
+  color: #525054;
   text-align: left;
 }
 
@@ -109,7 +130,7 @@ hr {
   margin: 16px auto;
   width: 640px;
   font-size: 12px;
-  color: rgb(82, 80, 84);
+  color: #525054;
   text-align: center;
 }
 
@@ -117,6 +138,6 @@ hr {
   margin: 24px auto;
   width: 640px;
   font-size: 22px;
-  color: rgb(108, 106, 111);
+  color: #6c6a6f;
   text-align: center;
 }
