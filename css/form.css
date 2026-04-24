@@ -101,6 +101,13 @@ input:focus {
   height: 48px;
 }
 
+.clear-btn-style {
+  font-size: 14px;
+  font-weight: 400;
+  color: #5f6368;
+  text-align: right;
+}
+
 .submit-btn {
   border-radius: 4px;
   font-size: 14px;

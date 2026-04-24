@@ -2,9 +2,10 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="css/reset.css" />
     <link rel="stylesheet" href="css/form.css" />
+    <script defer src="../js/form.js"></script>
     <title>google表單</title>
   </head>
   <body>
@@ -73,14 +74,35 @@
             />
           </div>
 
-          <div class="form-blocks">
-            <div class="form-questions">喜歡的顏色</div>
-            <input class="option-btn" type="radio" name="color" id="yollow" />
+          <div class="form-blocks" id="radioBtns">
+            <div class="form-questions" id="favoriteColor">喜歡的顏色</div>
+            <input
+              class="option-btn"
+              type="radio"
+              name="color"
+              id="yollow"
+              value=""
+            />
             <label for="yollow">黃</label><br />
-            <input class="option-btn" type="radio" name="color" id="green" />
+            <input
+              class="option-btn"
+              type="radio"
+              name="color"
+              id="green"
+              value=""
+            />
             <label for="green">綠</label><br />
-            <input class="option-btn" type="radio" name="color" id="red" />
+            <input
+              class="option-btn"
+              type="radio"
+              name="color"
+              id="red"
+              value=""
+            />
             <label for="red">紅</label><br />
+            <div class="clear-btn-style">
+              <button type="button" id="clearbtn" hidden>清除選取的項目</button>
+            </div>
           </div>
 
           <div class="form-blocks">
