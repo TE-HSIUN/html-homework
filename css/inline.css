@@ -128,18 +128,18 @@
   text-align: center;
 }
 
-.tools-text {
+.text1 {
   line-height: 3;
 }
 
-.tools-text :first-child {
+.text1 :first-child {
   font-size: 27px;
   font-weight: 500;
   color: #ec6300;
   text-align: center;
 }
 
-.tools-text :last-child {
+.text1 :last-child {
   font-size: 32px;
   font-weight: 500;
   color: #333333;
@@ -147,26 +147,129 @@
 }
 
 .reservation-management {
-  background-color: #ff000029;
-  height: 1000px;
-  width: 100%;
   background-image: url("https://inline.company/wp-content/uploads/2024/07/New-official-website_v2_hp_background1.png");
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;
+  /* column-gap: 30px; */
   background-size: cover;
-  background-position: center;
   background-repeat: no-repeat;
 }
 
 .reservation-management > img {
-  width: 600px;
+  margin-top: 100px;
+  width: 40%;
   height: auto;
 }
 
+.reservation-management-content {
+  width: 500px;
+  margin: 50px;
+  color: #252932;
+}
+
 .reservation-management-content > h2 {
-  font-size: 36px;
+  font-size: 24px;
   font-weight: 700;
-  color: #ec6300;
-  margin-bottom: 30px;
+  color: #064c8c;
+  margin: 0 0 50px 75px;
+}
+
+.reservation-management-list {
+  display: flex;
+  flex-direction: column;
+  row-gap: 50px;
+}
+
+.reservation-management-item {
+  display: flex;
+  align-items: flex-start;
+  column-gap: 30px;
+}
+
+.reservation-management-icon {
+  width: 45px;
+  height: auto;
+}
+
+.reservation-management-text h3 {
+  font-size: 1.2rem;
+  font-weight: 500;
+  color: #252932;
+  margin-bottom: 10px;
+}
+
+.reservation-management-text p {
+  font-weight: 400;
+  line-height: 2;
+  color: #252932cc;
+}
+
+.queue-management {
+  background-image: url("https://inline.company/wp-content/uploads/2024/07/New-official-website_v2_hp_background2.png");
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  column-gap: 30px;
+  flex-wrap: wrap;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.queue-management > img {
+  margin-top: 100px;
+  width: 40%;
+  height: auto;
+}
+
+.queue-management-content {
+  width: 500px;
+  margin: 50px;
+  color: #252932;
+}
+
+.queue-management-content > h2 {
+  font-size: 24px;
+  font-weight: 700;
+  color: #064c8c;
+  margin: 0 0 50px 75px;
+}
+
+.queue-management-list {
+  display: flex;
+  flex-direction: column;
+  row-gap: 50px;
+}
+
+.queue-management-item {
+  display: flex;
+  align-items: flex-start;
+  column-gap: 30px;
+}
+
+.queue-management-icon {
+  width: 45px;
+  height: auto;
+}
+
+.queue-management-text h3 {
+  font-size: 1.2rem;
+  font-weight: 500;
+  color: #252932;
+  margin-bottom: 10px;
+}
+
+.queue-management-text p {
+  font-weight: 400;
+  line-height: 2;
+  color: #252932cc;
+}
+
+.text2 {
+  margin: 100px;
+  text-align: center;
+
+  font-size: 20px;
+  line-height: 3;
+  color: #252932;
 }
