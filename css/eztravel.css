@@ -1,0 +1,109 @@
+section {
+  /* width: 100%; */
+  /* max-width: 1100px; */
+  width: 1100px;
+  margin: 0 auto;
+}
+
+h6 {
+  font-size: 30px;
+  margin: 10px;
+  font-weight: 700;
+}
+
+.featured-topics-container {
+  width: 100%;
+  height: 330px;
+  background-color: #c2c2c2;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(12, 1fr);
+  gap: 15px;
+  grid-template-areas:
+    "img1 img2 img4 img6"
+    "img1 img2 img4 img6"
+    "img1 img2 img4 img6"
+    "img1 img2 img4 img7"
+    "img1 img2 img5 img7"
+    "img1 img2 img5 img7"
+    "img1 img2 img5 img8"
+    "img1 img2 img5 img8"
+    "img1 img3 img5 img8"
+    "img1 img3 img5 img9"
+    "img1 img3 img5 img9"
+    "img1 img3 img5 img9";
+}
+
+.featured-topics-container > a {
+  position: relative;
+  display: block;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.featured-topics-area1 {
+  background-image: url("https://image.cdn-eztravel.com.tw/CsA2Go4BN9OvVkDgWEKu4RYhCz4Z-HeISatUOi3YZFU/g:ce/q:95/aHR0cHM6Ly9ldmVudC5jZG4tZXp0cmF2ZWwuY29tLnR3L2hwaW1nL2FwcC81NjB4ODIwLzU2MHg4MjBfMjAyNjA1YnJvczIuanBn.jpg");
+  background-size: cover;
+  grid-area: img1;
+}
+
+.featured-topics-area1::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 50%;
+  bottom: 0;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.6), transparent);
+}
+
+.featured-topics-area1-text {
+  position: absolute;
+  font-size: 18px;
+  font-weight: 700;
+  z-index: 1;
+  padding: 10px;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  color: #fff;
+}
+
+.featured-topics-area2 {
+  grid-area: img2;
+  background-color: #dd4747;
+}
+
+.featured-topics-area3 {
+  grid-area: img3;
+  background-color: #dd4747;
+}
+
+.featured-topics-area4 {
+  grid-area: img4;
+  background-color: #dd4747;
+}
+
+.featured-topics-area5 {
+  grid-area: img5;
+  background-color: #dd4747;
+}
+
+.featured-topics-area6 {
+  grid-area: img6;
+  background-color: #dd4747;
+}
+
+.featured-topics-area7 {
+  grid-area: img7;
+  background-color: #dd4747;
+}
+
+.featured-topics-area8 {
+  grid-area: img8;
+  background-color: #dd4747;
+}
+
+.featured-topics-area9 {
+  grid-area: img9;
+  background-color: #dd4747;
+}
