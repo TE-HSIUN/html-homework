@@ -6,15 +6,29 @@ section {
 }
 
 h6 {
+  position: relative;
+  display: inline-block;
   font-size: 30px;
-  margin: 10px;
+  margin: 20px 0;
   font-weight: 700;
 }
 
+h6::before {
+  content: "";
+  position: absolute;
+  top: 2px;
+  left: -10px;
+  z-index: -1;
+  border-top: 36px solid #f5b51b;
+  border-right: 36px solid transparent;
+}
+
+.japanese-group-title::before {
+  border-top: 18px solid #11d073;
+  border-right: 18px solid transparent;
+}
+
 .featured-topics-container {
-  width: 100%;
-  height: 330px;
-  background-color: #c2c2c2;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   grid-template-rows: repeat(12, 1fr);
@@ -34,29 +48,26 @@ h6 {
     "img1 img3 img5 img9";
 }
 
-.featured-topics-container > a {
+.featured-topics-container > a:nth-child(-n + 5) {
   position: relative;
   display: block;
   border-radius: 10px;
   overflow: hidden;
-}
-
-.featured-topics-area1 {
-  background-image: url("https://image.cdn-eztravel.com.tw/CsA2Go4BN9OvVkDgWEKu4RYhCz4Z-HeISatUOi3YZFU/g:ce/q:95/aHR0cHM6Ly9ldmVudC5jZG4tZXp0cmF2ZWwuY29tLnR3L2hwaW1nL2FwcC81NjB4ODIwLzU2MHg4MjBfMjAyNjA1YnJvczIuanBn.jpg");
+  width: 230px;
   background-size: cover;
-  grid-area: img1;
 }
 
-.featured-topics-area1::after {
+.featured-topics-container > a:nth-child(-n + 5)::after {
   content: "";
   position: absolute;
+  z-index: 1;
   width: 100%;
   height: 50%;
   bottom: 0;
   background: linear-gradient(to top, rgba(0, 0, 0, 0.6), transparent);
 }
 
-.featured-topics-area1-text {
+.featured-topics-container > a > p {
   position: absolute;
   font-size: 18px;
   font-weight: 700;
@@ -64,46 +75,139 @@ h6 {
   padding: 10px;
   bottom: 0;
   left: 0;
-  width: 100%;
   color: #fff;
+}
+
+.featured-topics-area1 {
+  grid-area: img1;
+  background-image: url("https://image.cdn-eztravel.com.tw/UryiumKiUZ8puaPNFgQJil95Fr86h44abIydM0UdWkk/g:ce/q:95/aHR0cHM6Ly9ldmVudC5jZG4tZXp0cmF2ZWwuY29tLnR3L2hwaW1nL2FwcC81NjB4ODIwLzU2MHg4MjBfMjAyNlRURS5qcGc.jpg");
 }
 
 .featured-topics-area2 {
   grid-area: img2;
-  background-color: #dd4747;
+  background-image: url("https://image.cdn-eztravel.com.tw/H6WOyfln3xebbD63BdrCKtCYf8c6n-lq7006pv1b7wQ/g:ce/q:95/aHR0cHM6Ly9ldmVudC5jZG4tZXp0cmF2ZWwuY29tLnR3L2hwaW1nL2hwL2Jhbm5lci8yMzB4MjEwLzIzMHgyMTBfMjAyMzExMDFBLnBuZw.png");
 }
 
 .featured-topics-area3 {
   grid-area: img3;
-  background-color: #dd4747;
+  background-image: url("https://image.cdn-eztravel.com.tw/KYU7NGY8cykO65XGDhWC3l9FUyxiojyuZNgME-R9Oms/g:ce/q:95/aHR0cHM6Ly9ldmVudC5jZG4tZXp0cmF2ZWwuY29tLnR3L2hwaW1nL2hwL2Jhbm5lci8yMzB4MTA0LzIzMHgxMDRfMjAyMTA4MTJBLnBuZw.png");
 }
 
 .featured-topics-area4 {
   grid-area: img4;
-  background-color: #dd4747;
+  background-image: url("https://image.cdn-eztravel.com.tw/Hn4gYjaYym7bq9-GZsmFRqYyA7c2MPDLaSLsVJZ6jmo/g:ce/q:95/aHR0cHM6Ly9ldmVudC5jZG4tZXp0cmF2ZWwuY29tLnR3L2hwaW1nL2hwL2Jhbm5lci8yMzB4MTA0LzIzMHgxMDRfMjAyMzAzMjhBLnBuZw.png");
 }
 
 .featured-topics-area5 {
   grid-area: img5;
-  background-color: #dd4747;
+  background-image: url("https://image.cdn-eztravel.com.tw/RDL3lpPJ97wz5kMa_yVNiDjeR0wvht6wNMXFY4dmxqI/g:ce/q:95/aHR0cHM6Ly9ldmVudC5jZG4tZXp0cmF2ZWwuY29tLnR3L2hwaW1nL2hwL2Jhbm5lci8yMzB4MjEwLzIzMHgyMTBfMjI4XzAxMDYuanBn.jpg");
+}
+
+.featured-topics-container > a:nth-child(n + 6) {
+  display: flex;
+  justify-content: space-between;
+  width: 355px;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.featured-topics-container > a > div {
+  width: 245px;
+  padding: 10px;
+  background-color: #fafafa;
+  color: #000000;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.featured-topics-container > a > img {
+  width: 110px;
+  object-fit: cover;
 }
 
 .featured-topics-area6 {
   grid-area: img6;
-  background-color: #dd4747;
 }
 
 .featured-topics-area7 {
   grid-area: img7;
-  background-color: #dd4747;
 }
 
 .featured-topics-area8 {
   grid-area: img8;
-  background-color: #dd4747;
 }
 
 .featured-topics-area9 {
   grid-area: img9;
-  background-color: #dd4747;
+}
+
+.japanese-group-tour-title {
+}
+
+.japanese-group-tour {
+  display: grid;
+  gap: 15px;
+  grid-template-columns: 2fr 1fr 1fr;
+  grid-template-rows: repeat(2, 200px);
+  grid-template-areas:
+    "img1 img2 img3"
+    "img1 img4 img5";
+}
+
+.japanese-group-tour > a {
+  position: relative;
+  display: block;
+  border-radius: 10px;
+  overflow: hidden;
+  background-size: cover;
+}
+
+.japanese-group-tour > a::after {
+  content: "";
+  position: absolute;
+  z-index: 0;
+  width: 100%;
+  height: 50%;
+  bottom: 0;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.6), transparent);
+}
+
+.japanese-group-tour > a > p {
+  position: absolute;
+  z-index: 1;
+  bottom: 0;
+  left: 0;
+  padding: 12px;
+  color: #fff;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 1.5;
+}
+
+.japanese-group-tour-area1 {
+  background-image: url("https://image.cdn-eztravel.com.tw/WjidF3sc6lamzvaDykyIPaufcuS3SIrWi57zFB3sIa4/rs:fit:1000:600:1/g:ce/q:95/aHR0cHM6Ly92YWNhdGlvbi5jZG4tZXp0cmF2ZWwuY29tLnR3L2ltZy9WRFIvc3VtbWVyMjAyNl83Njh4NDAwLmpwZw.jpg");
+  grid-area: img1;
+}
+
+.japanese-group-tour-area2 {
+  background-image: url("https://image.cdn-eztravel.com.tw/y7AdNo2aNTF3DR7vHrk-B-CCVEKxFVvKB3F7TWvYer8/rs:fit:1000:600:1/g:ce/q:95/aHR0cHM6Ly92YWNhdGlvbi5jZG4tZXp0cmF2ZWwuY29tLnR3L2ltZy9WRFIvSlBfMjM4NjQyNzkxNS5qcGc.jpg");
+  grid-area: img2;
+}
+
+.japanese-group-tour-area3 {
+  background-image: url("https://image.cdn-eztravel.com.tw/och2Vxcr9puw9ubb6o5sgrOPbRyDfzBmQLqC80Yep-c/rs:fit:1000:600:1/g:ce/q:95/aHR0cHM6Ly92YWNhdGlvbi5jZG4tZXp0cmF2ZWwuY29tLnR3L2ltZy9WRFIvSlBfMzg3MDk1MzExLmpwZw.jpg");
+
+  grid-area: img3;
+}
+
+.japanese-group-tour-area4 {
+  background-image: url("https://image.cdn-eztravel.com.tw/GYKsrdZrCUD2aUvFhFOTLpvx34jsjZaFkvbA6hcfGXM/rs:fit:1000:600:1/g:ce/q:95/aHR0cHM6Ly92YWNhdGlvbi5jZG4tZXp0cmF2ZWwuY29tLnR3L2ltZy9WRFIvQVVfNTg5NjI2NTkzLmpwZw.jpg");
+
+  grid-area: img4;
+}
+
+.japanese-group-tour-area5 {
+  background-image: url("https://image.cdn-eztravel.com.tw/5xDP-9fpMY-pqrYLtlnXf1BeOCaskpBvQN3PvsosfoU/rs:fit:1000:600:1/g:ce/q:95/aHR0cHM6Ly92YWNhdGlvbi5jZG4tZXp0cmF2ZWwuY29tLnR3L2ltZy9GUk4vRlJOMDAwMDAxOTQyNS5naWY.png");
+
+  grid-area: img5;
 }
