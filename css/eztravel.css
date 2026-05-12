@@ -2,14 +2,14 @@ section {
   /* width: 100%; */
   /* max-width: 1100px; */
   width: 1100px;
-  margin: 0 auto;
+  margin: 100px auto;
 }
 
 h6 {
+  margin-bottom: 20px;
   position: relative;
   display: inline-block;
   font-size: 30px;
-  margin: 20px 0;
   font-weight: 700;
 }
 
@@ -29,6 +29,7 @@ h6::before {
 }
 
 .featured-topics-container {
+  height: 330px;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   grid-template-rows: repeat(12, 1fr);
@@ -60,7 +61,7 @@ h6::before {
 .featured-topics-container > a:nth-child(-n + 5)::after {
   content: "";
   position: absolute;
-  z-index: 1;
+  z-index: 0;
   width: 100%;
   height: 50%;
   bottom: 0;
@@ -140,8 +141,45 @@ h6::before {
 .featured-topics-area9 {
   grid-area: img9;
 }
+/*------------------------------*/
+.japanese-group-header {
+  display: flex;
+  align-items: center;
+  gap: 140px;
+  margin-bottom: 20px;
+}
 
-.japanese-group-tour-title {
+.japanese-group-title {
+  margin-bottom: 0;
+}
+
+.japanese-group-nav > ul {
+  display: flex;
+  align-items: center;
+  gap: 36px;
+}
+
+.japanese-group-nav a {
+  position: relative;
+  display: block;
+  line-height: 4;
+  color: #222;
+  font-size: 18px;
+}
+
+.japanese-group-nav ul :first-child a {
+  color: #10b96d;
+  font-weight: 700;
+}
+
+.japanese-group-nav ul :first-child a::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  height: 3px;
+  background-color: #10b96d;
 }
 
 .japanese-group-tour {
@@ -160,6 +198,7 @@ h6::before {
   border-radius: 10px;
   overflow: hidden;
   background-size: cover;
+  background-position: center center;
 }
 
 .japanese-group-tour > a::after {
@@ -172,16 +211,44 @@ h6::before {
   background: linear-gradient(to top, rgba(0, 0, 0, 0.6), transparent);
 }
 
-.japanese-group-tour > a > p {
+.japanese-group-tour-text {
   position: absolute;
   z-index: 1;
   bottom: 0;
+  right: 0;
   left: 0;
-  padding: 12px;
+  padding: 10px;
   color: #fff;
-  font-size: 18px;
+  font-size: 16px;
   font-weight: 700;
   line-height: 1.5;
+}
+
+.japanese-group-tour-text h3 {
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.japanese-group-tour-detail {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.japanese-group-tour-detail > p:nth-child(1) {
+  font-size: 16px;
+}
+
+.japanese-group-tour-detail > p:nth-child(2) {
+  font-size: 14px;
+}
+
+.japanese-group-tour-price span {
+  color: #ffcc00;
+  padding: 0 4px;
+  font-size: 18px;
+  font-weight: 700;
 }
 
 .japanese-group-tour-area1 {
@@ -196,18 +263,15 @@ h6::before {
 
 .japanese-group-tour-area3 {
   background-image: url("https://image.cdn-eztravel.com.tw/och2Vxcr9puw9ubb6o5sgrOPbRyDfzBmQLqC80Yep-c/rs:fit:1000:600:1/g:ce/q:95/aHR0cHM6Ly92YWNhdGlvbi5jZG4tZXp0cmF2ZWwuY29tLnR3L2ltZy9WRFIvSlBfMzg3MDk1MzExLmpwZw.jpg");
-
   grid-area: img3;
 }
 
 .japanese-group-tour-area4 {
   background-image: url("https://image.cdn-eztravel.com.tw/GYKsrdZrCUD2aUvFhFOTLpvx34jsjZaFkvbA6hcfGXM/rs:fit:1000:600:1/g:ce/q:95/aHR0cHM6Ly92YWNhdGlvbi5jZG4tZXp0cmF2ZWwuY29tLnR3L2ltZy9WRFIvQVVfNTg5NjI2NTkzLmpwZw.jpg");
-
   grid-area: img4;
 }
 
 .japanese-group-tour-area5 {
   background-image: url("https://image.cdn-eztravel.com.tw/5xDP-9fpMY-pqrYLtlnXf1BeOCaskpBvQN3PvsosfoU/rs:fit:1000:600:1/g:ce/q:95/aHR0cHM6Ly92YWNhdGlvbi5jZG4tZXp0cmF2ZWwuY29tLnR3L2ltZy9GUk4vRlJOMDAwMDAxOTQyNS5naWY.png");
-
   grid-area: img5;
 }
