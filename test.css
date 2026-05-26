@@ -1,0 +1,41 @@
+/*
+https://github.com/Kkrystalll/F2E04-HTML-CSS/tree/main/test
+希望在電腦板 (螢幕寬度大於或等於 1024px) 時，會一次顯示三張卡片，卡片與卡片間距 10px
+在平板 (螢幕寬度大於或等於 768px) 時，會一次顯示兩張卡片，卡片與卡片間距 10px
+在手機 (螢幕寬度小於 768px) 時，會一次顯示一張卡片，卡片與卡片間距 10px
+且卡片寬度會根據外容器 (container) 縮放，請完成 CSS 樣式
+若完成可以在下方貼上您的 github 連結 (重點在 CSS 檔，其他檔案有沒有都沒關係)
+*/
+
+.container {
+  max-width: 1000px;
+  margin: 100px auto;
+  background-color: #aaa;
+  padding: 0 10px;
+}
+
+.card {
+  padding: 20px;
+  background-color: #ffa;
+}
+
+.card-img img {
+  width: 100%;
+  object-fit: cover;
+}
+
+@media (min-width: 768px) {
+  .container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+  }
+}
